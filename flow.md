@@ -15,14 +15,15 @@ flowchart LR
     subgraph Mapping Layer
         C1 --> D[Universal Mapping]
         C2 --> D
-        D --> E[Fill Missing Metrics]
-        E --> F[Unified Mapping Output]
     end
 
-    subgraph Validation & Output
-        F --> G[QA Validation]
-        G --> H[Generate 2025 Excel Template]
-    end
+    D --> I{Mapping Valid?}
+
+    I -->|Yes| Z[Generate 2025 Excel from New 10-K/10-Q PDF]
+
+    I -->|No| E[Run Unified Mapping Pipeline]
+    E --> F[Mapping Fixed]
+    F --> Z
 
 
     ```
