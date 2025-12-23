@@ -75,26 +75,32 @@ flowchart LR
 ```text
 /project-root
 │
-├─ data/
-│   ├─ excel_raw/              # 3-year historical spreadsheets
-│   ├─ json_output/            # generated JSON
-│   ├─ pdf_raw/                # downloaded 10-K/10-Q
-│   ├─ csv_extracted/          # parsed CSV output
+├─ Calculation_result/
+│   ├─ calculated_metric_2023_from_unified_v2.json/       # parsed JSON output
+│   ├─ calculated_metric_2023_from_unified_v2.json/          # parsed JSON output
+│   ├─ calculated_metric_2024_from_unified_v2.json/          # parsed JSON output
 │
-├─ mapping/
+├─ data_files/
 │   ├─ universal_map.json      # metric mapping dictionary
 │   ├─ unified_rules.py        # fix rules for missing values
 │
-├─ pipelines/
+├─  extracted_tables/ELME/
 │   ├─ excel_to_json.py
 │   ├─ pdf_to_csv.py
 │   ├─ mapping_validation.py
 │   ├─ mapping_fix_pipeline.py
 │   ├─ generate_excel_template.py
 │
-└─ docs/
-    ├─ architecture.md
-    ├─ mapping_rules.md
+├─  mappings/
+|    ├─ architecture.md
+|    ├─ mapping_rules.md
+|
+├─  section_extraction_data/
+│   ├─ excel_to_json.py
+│   ├─ pdf_to_csv.py
+│   ├─ mapping_validation.py
+│   ├─ mapping_fix_pipeline.py
+│   ├─ generate_excel_template.py
 
 ```
 
