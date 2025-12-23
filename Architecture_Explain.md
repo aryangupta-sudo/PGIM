@@ -100,21 +100,21 @@ flowchart LR
 **🧾 Data Inputs**
 
 
-📌** Historical Excels**
+📌 **Historical Excels**
 
-   * Contains 5 years of financial statements
+   * Contains 5 years of financial statements.
 
-   * Data typically contains alot of fields and formulas.
+   * Data sets are comprised of numerous fields and complex calculations.
 
-   * Need to reformat → component-based
+   * Need to reformat → component-based.
 
 **📌 SEC Filings**
 
-   * 10-K / 10-Q financial disclosures
+   * 10-K / 10-Q financial disclosures.
 
-   * PDF conains various fields and data
+   * The PDF features various data fields and associated information.
 
-   * Extract tables using Python pipelines and Functions.
+   * Implement structured table extraction leveraging Python functions and data pipelines.
 
 -----------------------------------------------------------------------------------------------------------------------------
 
@@ -161,37 +161,48 @@ from pipelines.pdf_to_csv import extract_pdf_tables
 extract_pdf_tables("data/pdf_raw/AMZN_2023_10K.pdf", output_folder="data/csv_extracted/")
 
 -----------------------------------------------------------------------------------------------------------------------------
-3. Universal Mapping
-Purpose:
+**3. Universal Mapping**
+   
+**Purpose:**
+
 Align financial metrics from historical JSON and SEC CSV data.
 
-Inputs
+**Inputs**
 
-excel JSON (3Y)
+  * excel JSON (5Y)
 
-SEC extracted CSV
+  * SEC extracted CSV
 
-universal_map.json
+  * universal_map.json
 
-Internal Example
+**Internal Example**
 
 mapped = apply_universal_mapping(excel_json, csv_data, mapping_rules)
-4. Mapping Validation
-Purpose
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+**4. Mapping Validation**
+
+**Purpose**
+
 Determine if all standard financial components have been successfully mapped.
 
-Logic
+**Logic**
 
-If True → skip fix pipeline
+   * If _True_ → skip fix pipeline
 
-If False → run automated fix
+   * If _False_ → run automated fix
 
-Internal Example
+**Internal Example**
 
 if validate_mapping(mapped):
     status = "OK"
 else:
     status = "MISSING"
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+
 5. Unified Mapping Pipeline (Fix Missing Values)
 Triggered only when some values are not identified or do not match known attributes.
 
