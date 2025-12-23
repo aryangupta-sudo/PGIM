@@ -1,4 +1,4 @@
-                           📘  Financial Data Normalization – Architecture Document
+                           📘  Historical Financial Analysis – Architecture Document
 
 🏛 **Overview**
 
@@ -117,7 +117,7 @@ flowchart LR
 
    * The PDF features various data fields and associated information.
 
-   * Implement structured table extraction leveraging Python functions and data pipelines.
+   * Implement structured table extraction leveraging Python functions, OCR and data pipelines.
 
 -----------------------------------------------------------------------------------------------------------------------------
 
