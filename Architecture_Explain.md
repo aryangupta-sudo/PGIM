@@ -97,58 +97,70 @@ flowchart LR
 
 -----------------------------------------------------------------------------------------------------------------------------
     
+**🧾 Data Inputs**
 
 
-🧾 Data Inputs
+📌** Historical Excels**
 
+   * Contains 5 years of financial statements
 
-📌 Historical Excel
-Contains 3 years of financial statements
+   * Data typically contains alot of fields and formulas.
 
-Data typically inconsistent in structure
+   * Need to reformat → component-based
 
-Need to reformat → component-based
+**📌 SEC Filings**
 
-📌 SEC Filings
-10-K / 10-Q financial disclosures
+   * 10-K / 10-Q financial disclosures
 
-Unstructured PDF
+   * PDF conains various fields and data
 
-Extract tables using internal OCR/Table software
+   * Extract tables using Python pipelines and Functions.
 
-🔄 Pipeline Details
-1. Excel → JSON Conversion
-Purpose:
-Convert 3-year Excel data to structured machine-readable format.
+-----------------------------------------------------------------------------------------------------------------------------
 
-Key Tasks
+**🔄 Pipeline Details**
 
-Parse workbook
+**1. Excel → JSON Conversion**
 
-Normalize field names
+**Purpose:**
 
-Convert to hierarchical JSON
+Convert 5-year Excel data to structured machine-readable format.
+
+**Key Tasks**
+
+  * Parse Excel Workbook
+
+  * Normalize field names
+
+  * Convert to hierarchical JSON
 
 Internal Example
 
 from pipelines.excel_to_json import convert_excel_to_json
 json_data = convert_excel_to_json("data/excel_raw/financials.xlsx")
-2. PDF → CSV Extraction
-Purpose:
-Extract financial tables from SEC filings.
 
-Key Tasks
+-----------------------------------------------------------------------------------------------------------------------------
 
-Download PDFs
+**2. PDF → CSV Extraction**
 
-Read tables
+**Purpose:**
 
-Convert detected values into CSV
+ Extract financial tables from PDF filings.
+
+**Key Tasks**
+
+  * Download PDFs
+
+  * Read tables
+
+  * Convert detected values into CSV
 
 Internal Example
 
 from pipelines.pdf_to_csv import extract_pdf_tables
 extract_pdf_tables("data/pdf_raw/AMZN_2023_10K.pdf", output_folder="data/csv_extracted/")
+
+-----------------------------------------------------------------------------------------------------------------------------
 3. Universal Mapping
 Purpose:
 Align financial metrics from historical JSON and SEC CSV data.
