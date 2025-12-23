@@ -70,11 +70,9 @@ flowchart LR
 ```
 
 -----------------------------------------------------------------------------------------------------------------------------
+📂 Repository Structure
 
-  📂 Repository Structure
-
-
-  /project-root
+/project-root
 │
 ├─ data/
 │   ├─ excel_raw/              # 3-year historical spreadsheets
@@ -97,7 +95,7 @@ flowchart LR
     ├─ architecture.md
     ├─ mapping_rules.md
 
-
+-----------------------------------------------------------------------------------------------------------------------------
     
 
 
