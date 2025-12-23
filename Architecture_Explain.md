@@ -220,49 +220,36 @@ Internal Example
 generate_excel_template("data/pdf_raw/2025_AMZN_10K.pdf", fixed_values)
 Analysts then manually enter final confirmed values into this structured sheet.
 
-🧪 Validation & Quality Checks
-Performed at multiple points:
+-----------------------------------------------------------------------------------------------------------------------------
 
-Check if sum of components equals totals
 
-Validate YoY % consistency
+**🧪 Validation & Quality Checks**
 
-Check missing or zero values
+   * Performed at multiple points:
 
-Ensure known values map to expected fields
+   * Check if sum of components equals totals
 
-If failing, pipeline halts or reprocesses.
+   * Validate YoY % consistency
 
-🚀 Benefits
-Eliminates manual inconsistencies
+  * Check missing or zero values
 
-Ensures metric standardization
+  * Ensure known values map to expected fields
 
-Accelerates financial filing preparation
+  * If failing, pipeline halts or reprocesses.
 
-Scales for multiple companies
+-----------------------------------------------------------------------------------------------------------------------------
 
-Fully documented for audit and compliance
+**🚀 Benefits**
 
-🔮 Future Enhancements
-Database storage (PostgreSQL/Snowflake)
+  * Eliminates manual inconsistencies
 
-Automated anomaly detection
+  * Ensures metric standardization
 
-Version control for mapping rules
+  * Accelerates financial filing preparation
 
-Deployment to Azure Data Factory or Databricks
+  * Scales for multiple companies
 
-Multi-company parallel processing
+  * Fully documented for audit and compliance
 
-👥 Stakeholders
-Engineering: pipeline development
+-----------------------------------------------------------------------------------------------------------------------------
 
-Data Analysts: template population
-
-Finance Team: accuracy checks
-
-Management: reporting and governance
-
-🏁 Conclusion
-This architecture provides a repeatable, scalable, auditable pipeline for leveraging historical and SEC financial data to automate future reporting cycles.
