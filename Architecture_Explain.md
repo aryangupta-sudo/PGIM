@@ -18,21 +18,29 @@ This document describes the architecture, data flow, and processing logic used t
 
   * Automatically generate future Excel templates (e.g., FY 2025)
 
-This system enables analysts to receive a clean, consistent financial template populated using verified mapping logic.
+This system enables analysts to receive a **clean, consistent financial template** populated using verified mapping logic.
 
+-----------------------------------------------------------------------------------------------------------------------------
 🎯 **Objectives**
 
-Turn unstructured financial documents into structured datasets
+  * Turn unstructured financial documents into structured datasets
 
-Ensure metric consistency across multiple filings
+  * Ensure metric consistency across multiple filings
 
-Detect and fix gaps in financial mapping
+  * Detect and fix gaps in financial mapping
 
-Support future automation for SEC filings
+  * Support future automation for SEC filings
 
-Enable analysts to focus only on final value adjustments
+  * Enable analysts to focus only on final value adjustments
 
-🧱 High-Level Architecture (ETL Flow)
+-------------------------------------------------------------------------------------------------------------------------
+
+🧱 **High-Level Architecture (ETL Flow)**
+
+
+
+```mermaid
+
 flowchart LR
 
     subgraph Historical Data
@@ -57,7 +65,15 @@ flowchart LR
     I -->|No| E[Run Unified Mapping Pipeline]
     E --> F[Mapping Fixed]
     F --> Z
-📂 Repository Structure
+
+
+```
+
+-----------------------------------------------------------------------------------------------------------------------------
+
+  📂 Repository Structure
+
+
 /project-root
 │
 ├─ data/
@@ -80,7 +96,11 @@ flowchart LR
 └─ docs/
     ├─ architecture.md
     ├─ mapping_rules.md
+
+
 🧾 Data Inputs
+
+
 📌 Historical Excel
 Contains 3 years of financial statements
 
