@@ -52,6 +52,29 @@ Financial reporting data currently suffers from:
 
     As data volume and reporting frequency increase, **manual or semi-manual processing does not scale.**
 -------------------------------------------------------------------------------------------------------------------------
+**2. Why Automation Is Required**
+
+**🔹 1. Accuracy & Consistency**
+
+Manual mapping leads to:
+
+  * Incorrect financial classifications
+
+  * Period mismatches
+
+  * Inconsistent metric calculations
+
+**Automation ensures:**
+
+  * Single source of truth via unified mapping
+
+  * Repeatable and deterministic results
+
+  * Reduced reconciliation issues
+
+-------------------------------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------------------------------
 
 🧱 **High-Level Architecture (ETL Flow)**
 
