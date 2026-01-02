@@ -34,6 +34,24 @@ This system enables analysts to receive a **clean, consistent financial template
   * Enable analysts to focus only on final value adjustments
 
 -------------------------------------------------------------------------------------------------------------------------
+**❓ Why Are We Automating This Financial Data Pipeline?**
+
+**1. Business Problem We Are Solving**
+
+Financial reporting data currently suffers from:
+
+❌ Heavy manual extraction from 10-K / 10-Q PDFs
+
+❌ Human errors in mapping financial line items
+
+❌ Inconsistent handling of Annual vs YTD periods
+
+❌ Long turnaround time for HFA table generation
+
+❌ Poor audit traceability and rework during validation
+
+  
+-------------------------------------------------------------------------------------------------------------------------
 
 🧱 **High-Level Architecture (ETL Flow)**
 
