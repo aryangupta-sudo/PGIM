@@ -73,6 +73,52 @@ Manual mapping leads to:
   * Reduced reconciliation issues
 
 -------------------------------------------------------------------------------------------------------------------------
+**🔹 2. Time & Cost Efficiency**
+
+| Activity | Manual Effort ❌ | Automated Effort ✅ |
+|---------|----------------|--------------------|
+| PDF table extraction | Hours | Seconds |
+| Mapping corrections | Manual review | Rule-based |
+| Validation | Manual QA | Auto-validation |
+| HFA generation | Manual Excel work | Programmatic |
+
+-------------------------------------------------------------------------------------------------------------------------
+**🔹 3. Scalability for Multi-Period Data**
+
+The system supports:
+
+   * Annual filings
+
+   * YTD filings
+
+   * Multiple quarters and years
+
+Manual workflows **break** at scale.
+
+Automation **scales horizontally** without increasing human effort.
+
+-------------------------------------------------------------------------------------------------------------------------
+
+**🔹 4. Auditability & Traceability**
+
+  Automation provides:
+
+ * Versioned mappings
+
+ * Raw vs corrected mapping lineage
+
+ * Validation reports
+
+
+This is critical for:
+
+  * Audit reviews
+
+  * Regulatory compliance
+
+  * Historical restatements
+-------------------------------------------------------------------------------------------------------------------------
+
 
 -------------------------------------------------------------------------------------------------------------------------
 
