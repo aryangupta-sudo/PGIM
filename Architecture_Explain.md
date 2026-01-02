@@ -34,7 +34,7 @@ This system enables analysts to receive a **clean, consistent financial template
   * Enable analysts to focus only on final value adjustments
 
 -------------------------------------------------------------------------------------------------------------------------
-**❓ Why Are We Automating This Financial Data?**
+**❓ Why Are We Automating This Financial Data Analysis?**
 
 **1. Business Problem We Are trying to Solving**
 
