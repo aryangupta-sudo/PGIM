@@ -40,15 +40,15 @@ This system enables analysts to receive a **clean, consistent financial template
 
 Financial reporting data currently suffers from:
 
-❌ Heavy manual extraction from 10-K / 10-Q PDFs
+   * ❌ Heavy manual extraction from 10-K / 10-Q PDFs
 
-❌ Human errors in mapping financial line items
+   * ❌ Human errors in mapping financial line items
 
-❌ Inconsistent handling of Annual vs YTD periods
+   * ❌ Inconsistent handling of Annual vs YTD periods
 
-❌ Long turnaround time for HFA table generation
+   * ❌ Long turnaround time for HFA table generation
 
-❌ Poor audit traceability and rework during validation
+   * ❌ Poor audit traceability and rework during validation
 
   
 -------------------------------------------------------------------------------------------------------------------------
