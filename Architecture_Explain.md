@@ -118,8 +118,49 @@ This is critical for:
 
   * Historical restatements
 -------------------------------------------------------------------------------------------------------------------------
+**📊 Manual vs Automated Financial Data Processing**
 
+```mermaid
 
+flowchart LR
+    %% Manual Process (Red)
+    M1[Manual: Download 10K / 10Q PDFs]
+    M2[Manual: Read Tables]
+    M3[Manual: Copy-Paste into Excel]
+    M4[Manual: Section Identification]
+    M5[Manual: Mapping per Period]
+    M6[Manual: Validation & Rework]
+    M7[Manual: HFA Table Creation]
+
+    %% Automated Process (Green)
+    A1[Automated: Upload PDFs & Allvue XLSM]
+    A2[Automated: Table Extraction]
+    A3[Automated: Section Detection]
+    A4[Automated: Mapping Engine]
+    A5[Automated: Unified Mapping]
+    A6[Automated: Auto Validation]
+    A7[Automated: HFA Generation]
+
+    %% Flows
+    M1 --> M2 --> M3 --> M4 --> M5 --> M6 --> M7
+    A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7
+
+    %% Alignment (visual only)
+    M1 -.-> A1
+    M2 -.-> A2
+    M3 -.-> A3
+    M4 -.-> A4
+    M5 -.-> A5
+    M6 -.-> A6
+    M7 -.-> A7
+
+    %% Styling
+    classDef manual fill:#fdecea,stroke:#d93025,stroke-width:1.5px,color:#000
+    classDef automated fill:#e6f4ea,stroke:#188038,stroke-width:1.5px,color:#000
+
+    class M1,M2,M3,M4,M5,M6,M7 manual
+    class A1,A2,A3,A4,A5,A6,A7 automated
+```
 -------------------------------------------------------------------------------------------------------------------------
 
 🧱 **High-Level Architecture (ETL Flow)**
