@@ -121,45 +121,52 @@ This is critical for:
 **📊 Manual vs Automated Financial Data Processing**
 
 ```mermaid
+flowchart TB
 
-flowchart LR
-    %% Manual Process (Red)
-    M1[Manual: Download 10K / 10Q PDFs]
-    M2[Manual: Read Tables]
-    M3[Manual: Copy-Paste into Excel]
-    M4[Manual: Section Identification]
-    M5[Manual: Mapping per Period]
-    M6[Manual: Validation & Rework]
-    M7[Manual: HFA Table Creation]
+%% ========== STYLES ==========
+classDef manual fill:#fdecea,stroke:#e74c3c,color:#000
+classDef auto fill:#e8f5e9,stroke:#2ecc71,color:#000
+classDef header fill:#e3f2fd,stroke:#1e88e5,font-weight:bold
 
-    %% Automated Process (Green)
-    A1[Automated: Upload PDFs & Allvue XLSM]
-    A2[Automated: Table Extraction]
-    A3[Automated: Section Detection]
-    A4[Automated: Mapping Engine]
-    A5[Automated: Unified Mapping]
-    A6[Automated: Auto Validation]
-    A7[Automated: HFA Generation]
+%% ========== HEADERS ==========
+H_STEP[Process Step]:::header
+H_MANUAL[❌ Manual Process]:::header
+H_AUTO[✅ Automated Process]:::header
 
-    %% Flows
-    M1 --> M2 --> M3 --> M4 --> M5 --> M6 --> M7
-    A1 --> A2 --> A3 --> A4 --> A5 --> A6 --> A7
+%% ========== ROW 1 ==========
+S1[PDF/Excel Handling]
+M1[Download 10K / 10Q PDFs]:::manual
+A1[Upload PDFs & Excel]:::auto
 
-    %% Alignment (visual only)
-    M1 -.-> A1
-    M2 -.-> A2
-    M3 -.-> A3
-    M4 -.-> A4
-    M5 -.-> A5
-    M6 -.-> A6
-    M7 -.-> A7
+%% ========== ROW 2 ==========
+S2[Data Extraction]
+M2[Manually Read Tables]:::manual
+A2[Automated Table Extraction]:::auto
 
-    %% Styling
-    classDef manual fill:#fdecea,stroke:#d93025,stroke-width:1.5px,color:#000
-    classDef automated fill:#e6f4ea,stroke:#188038,stroke-width:1.5px,color:#000
+%% ========== ROW 3 ==========
+S3[Data Structuring]
+M3[Copy-Paste into Excel]:::manual
+A3[Automated Section Detection]:::auto
 
-    class M1,M2,M3,M4,M5,M6,M7 manual
-    class A1,A2,A3,A4,A5,A6,A7 automated
+%% ========== ROW 4 ==========
+S4[Mapping Logic]
+M4[Manual Mapping per Period]:::manual
+A4[Rule-based Mapping Engine]:::auto
+
+%% ========== ROW 5 ==========
+S5[Validation]
+M5[Manual Validation & Rework]:::manual
+A5[Automated Validation Checks]:::auto
+
+%% ========== ROW 6 ==========
+S6[Output]
+M6[Manual HFA Table Creation]:::manual
+A6[Unified & Auto-Generated Mapping]:::auto
+
+%% ========== ALIGNMENT ==========
+H_STEP --> S1 --> S2 --> S3 --> S4 --> S5 --> S6
+H_MANUAL --> M1 --> M2 --> M3 --> M4 --> M5 --> M6
+H_AUTO --> A1 --> A2 --> A3 --> A4 --> A5 --> A6
 ```
 -------------------------------------------------------------------------------------------------------------------------
 
