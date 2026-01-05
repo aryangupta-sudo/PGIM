@@ -240,8 +240,30 @@ flowchart LR
 ```
 
 -----------------------------------------------------------------------------------------------------------------------------
-    
-**🧾 Data Inputs**
+
+**Proposed Architecture Logical Layering:**
+
+```mermaid
+graph TD
+    %% Define the style for the blocks (rectangles)
+    classDef layer fill:#4a90e2,stroke:#333,stroke-width:2px,color:#fff;
+
+    %% Define the nodes (layers)
+    A([Data Ingestion Layer])
+    B([Data Processing Layer])
+    C([Data Mapping and Validation Layer])
+    D([Data Output])
+
+    %% Define the flow (arrows)
+    A --> B
+    B --> C
+    C --> D
+
+    %% Apply the style to the nodes
+    class A,B,C,D layer;
+```
+-----------------------------------------------------------------------------------------------------------------------------
+**🧾 Data Inputs/Data Ingrstion Layer**
 
 
 📌 **Historical Excels**
