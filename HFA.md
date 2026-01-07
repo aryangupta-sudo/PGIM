@@ -32,7 +32,7 @@ The process began with individually sourcing the required filings:
 
 ### 2. Manual Data Location & Extraction
 
-Key financial statements within the PDFs had to be located and copied manually:
+Key financial statements within the PDFs had to be located and copied manually by PGIM analyst:
 
 *   Manually locate:
     *   Income Statement
