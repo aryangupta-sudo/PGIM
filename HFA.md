@@ -68,4 +68,63 @@ Even small formula changes caused **silent inaccuracies** across years.
 
 ---
 
+🧱 **High-Level Architecture (ETL Flow)**
+
+
+
+```mermaid
+
+flowchart LR
+
+    subgraph Historical Data
+        A1[Excel 3Y Data] --> B1[Break Components]
+        B1 --> C1[JSON Conversion]
+    end
+
+    subgraph SEC Data
+        A2[Download 10-K/10-Q PDFs] --> B2[Extract Content]
+        B2 --> C2[CSV Conversion]
+    end
+
+    subgraph Mapping Layer
+        C1 --> D[Universal Mapping]
+        C2 --> D
+    end
+
+    D --> I{Mapping Valid?}
+
+    I -->|Yes| Z[Generate 2025 Excel from New 10-K/10-Q PDF]
+
+    I -->|No| E[Run Unified Mapping Pipeline]
+    E --> F[Mapping Fixed]
+    F --> Z
+
+
+```
+--------------------------------------------------------------------------------------------------------------------
+
+**Proposed Architecture Logical Layering:**
+
+```mermaid
+graph TD
+    %% Define the style for the blocks (rectangles)
+    classDef layer fill:#4a90e2,stroke:#333,stroke-width:2px,color:#fff;
+
+    %% Define the nodes (layers)
+    A([Data Ingestion Layer])
+    B([Data Processing Layer])
+    C([Data Mapping and Validation Layer])
+    D([Data Output])
+
+    %% Define the flow (arrows)
+    A --> B
+    B --> C
+    C --> D
+
+    %% Apply the style to the nodes
+    class A,B,C,D layer;
+```
+-------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------
 
