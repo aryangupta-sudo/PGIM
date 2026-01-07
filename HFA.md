@@ -62,15 +62,10 @@ The final step was a manual quality assurance process:
 
 This manual approach was time-consuming, prone to human error during data entry and alignment, and lacked scalability.
 
+---
+**📌 Key Risk:**
+Even small formula changes caused **silent inaccuracies** across years.
 
-❌ Problems with the Manual Approach
-Issue	Impact
-Human error	Incorrect formulas & wrong mappings
-Inconsistent naming	Difficult year-to-year comparison
-Time-consuming	Days per company
-No traceability	Hard to audit or debug
-Not scalable	Cannot handle many entities
-📌 Key Risk:
-Even small formula changes caused silent inaccuracies across years.
+---
 
 
