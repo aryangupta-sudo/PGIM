@@ -19,10 +19,11 @@ flowchart LR
         LLM[LLM - AI Foundry]
     end
 
-    Fabric --> DI --> AF
+    Fabric --> AF
+    AF --> DI
+    DI --> AF
     AF --> AIS & CDB
     CS --> AF
-    AF --> AIS & CDB
     AIS & CDB -- Context --> AF
     AF -- Prompt --> LLM
     LLM -- Response --> CS
